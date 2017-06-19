@@ -1,0 +1,19 @@
+{
+  "name": "trekpoint",
+  "version": "1.0.0",
+  "description": "Find things to do while on vacation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryanxm19/trekpoint.git"
+  },
+  "author": "Bryan Mateer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bryanxm19/trekpoint/issues"
+  },
+  "homepage": "https://github.com/Bryanxm19/trekpoint#readme"
+}
