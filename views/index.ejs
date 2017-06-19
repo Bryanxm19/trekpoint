@@ -1,118 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trekpoint</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/app.css">
-<body>
+<body style="font-size:14px">
+  <div class="container text-center" id="landing-box">
     <img src="images/background.jpg" id="bg" alt="">
-    <div class="container text-center" id="landing-box">
-        <h1>WELCOME TO TREKPOINT</h1>
-        <a href="#signup" data-toggle="modal" data-target=".bs-modal-sm" class="btn btn-lg btn-primary" id="get-started">Get Started</a>
-        
-        <!-- Modal -->
-        <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <br>
-                <div class="bs-example bs-example-tabs">
-                    <ul id="myTab" class="nav nav-tabs">
-                      <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
-                      <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
-                    </ul>
-                </div>
-              <div class="modal-body">
-                <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade active in" id="signin">
-                    <form class="form-horizontal" method="post" action="/login">
-                    <fieldset>
-                    <!-- Sign In Form -->
-                    <!-- Text input-->
-                    <div class="control-group">
-                      <label class="control-label" for="userid">Username:</label>
-                      <div class="controls">
-                        <input required id="userid" name="username" type="text" class="form-control" class="input-medium">
-                      </div>
-                    </div>
-        
-                    <!-- Password input-->
-                    <div class="control-group">
-                      <label class="control-label" for="passwordinput">Password:</label>
-                      <div class="controls">
-                        <input required id="passwordinput" name="password" class="form-control" type="password" class="input-medium">
-                      </div>
-                    </div>
-        
-                    <!-- Button -->
-                    <div class="control-group">
-                      <label class="control-label" for="signin"></label>
-                      <div class="controls">
-                        <button id="signin" name="signin" class="btn btn-success">Sign In</button>
-                      </div>
-                    </div>
-                    </fieldset>
-                    </form>
-                </div>
-                <div class="tab-pane fade" id="signup">
-                    <form class="form-horizontal" method="post" action="/register">
-                    <fieldset>
-                    <!-- Sign Up Form -->
-                    <!-- Text input-->
-                    <div class="control-group">
-                      <label class="control-label" for="Email">Email:</label>
-                      <div class="controls">
-                        <input id="Email" name="user[email]" class="form-control" type="email" class="input-large" required>
-                      </div>
-                    </div>
-                    
-                    <!-- Text input-->
-                    <div class="control-group">
-                      <label class="control-label" for="userid">Username:</label>
-                      <div class="controls">
-                        <input id="userid" name="user[username]" class="form-control" type="text" class="input-large" required>
-                      </div>
-                    </div>
-                    
-                    <!-- Password input-->
-                    <div class="control-group">
-                      <label class="control-label" for="password">Password:</label>
-                      <div class="controls">
-                        <input id="password" name="user[password]" class="form-control" type="password"class="input-large" required>
-                        <em>1-8 Characters</em>
-                      </div>
-                    </div>
-                    
-                    <!-- Text input-->
-                    <div class="control-group">
-                      <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
-                      <div class="controls">
-                        <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" class="input-large" required>
-                      </div>
-                    </div>
-                    
-                    <!-- Button -->
-                    <div class="control-group">
-                      <label class="control-label" for="confirmsignup"></label>
-                      <div class="controls">
-                        <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
-                      </div>
-                    </div>
-                    </fieldset>
-                    </form>
+    <h1>WELCOME TO TREKPOINT</h1>
+    <a href="#signup" data-toggle="modal" data-target=".bs-modal-sm" class="btn btn-lg btn-primary" id="get-started">Get Started</a>
+      
+    <!-- Modal -->
+      <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <br>
+              <div class="bs-example bs-example-tabs">
+                  <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+                    <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                  </ul>
               </div>
+            <div class="modal-body">
+              <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="signin">
+                  <form class="form-horizontal" method="post" action="/login">
+                  <fieldset>
+                  <!-- Sign In Form -->
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="userid">Username:</label>
+                    <div class="controls">
+                      <input required id="userid" name="username" type="text" class="form-control" class="input-medium">
+                    </div>
+                  </div>
+      
+                  <!-- Password input-->
+                  <div class="control-group">
+                    <label class="control-label" for="passwordinput">Password:</label>
+                    <div class="controls">
+                      <input required id="passwordinput" name="password" class="form-control" type="password" class="input-medium">
+                    </div>
+                  </div>
+      
+                  <!-- Button -->
+                  <div class="control-group">
+                    <label class="control-label" for="signin"></label>
+                    <div class="controls">
+                      <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                    </div>
+                  </div>
+                  </fieldset>
+                  </form>
+              </div>
+              <div class="tab-pane fade" id="signup">
+                  <form class="form-horizontal" method="post" action="/register">
+                  <fieldset>
+                  <!-- Sign Up Form -->
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="Email">Email:</label>
+                    <div class="controls">
+                      <input id="Email" name="email" class="form-control" type="email" class="input-large" required>
+                    </div>
+                  </div>
+                  
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="userid">Username:</label>
+                    <div class="controls">
+                      <input id="userid" name="username" class="form-control" type="text" class="input-large" required>
+                    </div>
+                  </div>
+                  
+                  <!-- Password input-->
+                  <div class="control-group">
+                    <label class="control-label" for="password">Password:</label>
+                    <div class="controls">
+                      <input id="password" name="password" class="form-control" type="password" class="input-large" required>
+                      <em>Minimum 6 Characters</em>
+                    </div>
+                  </div>
+                  
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                    <div class="controls">
+                      <input id="reenterpassword" class="form-control" name="second_password" type="password" class="input-large" required>
+                    </div>
+                  </div>
+                  
+                  <!-- Button -->
+                  <div class="control-group">
+                    <label class="control-label" for="confirmsignup"></label>
+                    <div class="controls">
+                      <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                    </div>
+                  </div>
+                  </fieldset>
+                  </form>
             </div>
-              </div>
-              <div class="modal-footer">
-              <center>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </center>
-              </div>
+          </div>
+            </div>
+            <div class="modal-footer">
+            <center>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </center>
             </div>
           </div>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
