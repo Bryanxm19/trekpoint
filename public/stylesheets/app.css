@@ -1,0 +1,27 @@
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: -1;
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#landing-box {
+    padding-top: 40vh;
+}
+
+#landing-box h1 {
+    font-family: 'Merriweather', serif; 
+    color: white;
+    text-shadow: 1px 1px #000;
+}
+
+#get-started {
+    background-color: #1589FF;
+    border-color: #1589FF;
+    min-width: 200px;
+    max-width: 200px;
+}
