@@ -5,8 +5,11 @@ var express     = require("express"),
     helper      = require("../helpers/helper"),
     User        = require("../models/user");
     
+//environment variables setup   
+require('dotenv').config();
+    
 // root
-router.get("/", function(req, res) {
+router.get("/", middleware.landingLoggedIn, function(req, res) {
     res.render("index");
 });
 
@@ -31,8 +34,14 @@ router.post("/register", middleware.registerConfirm, function(req, res) {
     });
 });
 
+// logout route
+router.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+});
+
 router.get("/search", function(req, res) {
-    res.send("hey");
+    res.render("search");
 });
 
 module.exports = router;
