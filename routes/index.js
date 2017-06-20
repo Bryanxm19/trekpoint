@@ -2,6 +2,7 @@ var express     = require("express"),
     router      = express.Router(),
     passport    = require("passport"),
     middleware  = require("../middleware"),
+    helper      = require("../helpers/helper"),
     User        = require("../models/user");
     
 // root
@@ -21,7 +22,7 @@ router.post("/login", passport.authenticate("local",
 router.post("/register", middleware.registerConfirm, function(req, res) {
     User.register(new User({email: req.body.email, username: req.body.username}), req.body.password, function(err, user) {
         if(err) {
-            console.log(checkEmailError(err));
+            console.log(helper.checkUserError(err));
             return res.redirect("/");
         }
         passport.authenticate("local")(req, res, function() {
@@ -30,12 +31,8 @@ router.post("/register", middleware.registerConfirm, function(req, res) {
     });
 });
 
-function checkEmailError(err) {
-    if(err.message === "A user with the given username is already registered") {
-        return err.message;
-    } else {
-        return err.errors.email.message;
-    }
-}
+router.get("/search", function(req, res) {
+    res.send("hey");
+});
 
 module.exports = router;
