@@ -38,10 +38,6 @@ app.use(function(req, res, next) {
 // use routes
 app.use(indexRoutes);
 
-app.get("/search", function(req, res) {
-    res.send("hey");
-})
-
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Server started...");
 });
