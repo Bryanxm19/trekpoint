@@ -40,7 +40,7 @@ router.get("/logout", function(req, res) {
     res.redirect("/");
 });
 
-router.get("/search", function(req, res) {
+router.get("/search", middleware.isLoggedIn, function(req, res) {
     res.render("search");
 });
 
