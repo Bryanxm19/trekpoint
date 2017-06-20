@@ -1,6 +1,6 @@
 var middlewareObj = {};
 
-middlewareObj.loginConfirm = function(req, res, next) {
+middlewareObj.registerConfirm = function(req, res, next) {
     if(req.body.password != req.body.second_password) {
         console.log("Passwords do not match");
         res.redirect("/");
