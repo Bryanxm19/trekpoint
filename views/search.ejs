@@ -1,1 +1,21 @@
-<h1>Search!</h1>
+<% include ./partials/header %>
+<div class="container">
+    <img src="images/background.jpg" id="bg" alt="">
+    <div class="row" id="search-form-div">
+        <div id="trip-form-container">
+            <form>
+                <div class="form-group">
+                    <input class="form-control text-center" type="text" name="destination" value="" placeholder="Destination" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Destination'"> 
+                </div>
+                <div class="form-group">
+                    <input class="form-control text-center" type="text" name="daterange" value="" placeholder="Start/End Dates" readonly> 
+                </div>
+                <div class="form-group">
+                    <input class="form-control text-center btn btn-success" type="submit" value="Submit"> 
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="/logout">Logout</a>
+</div>
+<% include ./partials/footer %>
