@@ -14,6 +14,13 @@ middlewareObj.registerConfirm = function(req, res, next) {
     }
 }
 
+middlewareObj.isLoggedIn = function(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/");
+}
+
 middlewareObj.landingLoggedIn = function(req, res, next) {
     if(req.user) {
         res.redirect("/search");
