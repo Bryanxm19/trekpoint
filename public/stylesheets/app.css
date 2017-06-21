@@ -15,7 +15,7 @@
     padding-top: 35vh;
 }
 
-#landing-box h1 {
+#landing-box h1, #interests-header, #search-form-div h2 {
     font-family: 'Merriweather', serif; 
     color: white;
     text-shadow: 1px 1px #000;
@@ -28,6 +28,7 @@
     max-width: 200px;
 }
 
+/* Search Form*/
 #search-form-div {
     width: 70%;
     margin: 30vh auto;
@@ -37,4 +38,28 @@
     padding: 20px 10px 10px 10px;
     background-color: rgba(0, 102, 102, 0.55);
     border-radius: 3%;
+}
+
+/* Checkbox */
+.checkbox-inline.no_indent,
+.checkbox-inline.no_indent+.checkbox-inline.no_indent {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: white;
+}
+.checkbox-inline.no_indent:last-child {
+    margin-right: 0;
+}
+
+/* For Smaller Screens */
+
+@media (max-width: 427px) {
+    #search-form-div {
+        width: 100%;
+    }
+
+    body {
+      padding:0;
+    }
 }

@@ -2,6 +2,7 @@
 <div class="container">
     <img src="images/background.jpg" id="bg" alt="">
     <div class="row" id="search-form-div">
+        <h2 class="text-center">Find Things To Do</h2>
         <div id="trip-form-container">
             <form>
                 <div class="form-group">
@@ -11,7 +12,16 @@
                     <input class="form-control text-center" type="text" name="daterange" value="" placeholder="Start/End Dates" readonly> 
                 </div>
                 <div class="form-group">
-                    <input class="form-control text-center btn btn-success" type="submit" value="Submit"> 
+                    <h3 id="interests-header">Interests</h3>
+                    <label class="checkbox-inline no_indent"><input type="checkbox" value="music">Music</label>
+                    <label class="checkbox-inline no_indent"><input type="checkbox" value="sports">Sports</label>
+                    <label class="checkbox-inline no_indent"><input type="checkbox" value="arts">Arts & Theater</label>
+                    <label class="checkbox-inline no_indent"><input type="checkbox" value="restaurants">Restaurants</label>
+                    <label class="checkbox-inline no_indent"><input type="checkbox" value="nightlife">Nightlife</label>
+                    <label class="checkbox-inline no_indent"><input type="checkbox" value="tours">Tours</label>
+                </div>
+                <div class="form-group">
+                    <input class="form-control text-center btn btn-success" type="submit" value="Search"> 
                 </div>
             </form>
         </div>
