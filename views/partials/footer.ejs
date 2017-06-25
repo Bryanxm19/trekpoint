@@ -2,24 +2,46 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-  <script>
+  <script type="text/javascript">
     $(function() {
 
       $('input[name="daterange"]').daterangepicker({
         autoUpdateInput: false,
         locale: {
-            cancelLabel: 'Clear'
+            cancelLabel: 'Clear',
         }
       });
   
       $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(this).val(picker.startDate.format('YYYY-MM-DD') + ' to ' + picker.endDate.format('YYYY-MM-DD'));
       });
   
       $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');
       });
 
+    });
+  </script>
+  <script>
+    $('#search-form').on('submit', function (e) {
+      if($("input[name=destination]").val() === "") {
+        e.preventDefault();
+        $(".alert-danger").remove();
+        $(this).parent().prepend("<div class='alert alert-danger'>Please enter a destination</div>");
+        return false;
+      }
+      if($("input[name=daterange]").val() === "") {
+        e.preventDefault();
+        $(".alert-danger").remove();
+        $(this).parent().prepend("<div class='alert alert-danger'>Please enter the dates</div>");
+        return false;
+      }
+      if ($("input[type=checkbox]:checked").length === 0) {
+        e.preventDefault();
+        $(".alert-danger").remove();
+        $(this).parent().prepend("<div class='alert alert-danger'>Please select at least 1 interest</div>");
+        return false;
+      }
     });
   </script>
 </body>
