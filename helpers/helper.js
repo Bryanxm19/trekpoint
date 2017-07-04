@@ -15,6 +15,7 @@ helperObj.buildRequest = function(choices, startDate, endDate, destination) {
     var ticketmasterURL = "https://app.ticketmaster.com/discovery/v2/events.json";
     var ticketmasterQueries = {
         apikey: process.env.TICKETMASTER_KEY,
+        sort: "date,asc",
         source: "ticketmaster",
         startDateTime: startDate + "T12:00:00Z",
         endDateTime: endDate + "T23:59:59Z",
@@ -25,6 +26,7 @@ helperObj.buildRequest = function(choices, startDate, endDate, destination) {
             url: ticketmasterURL,
             qs: {
                 apikey: ticketmasterQueries.apikey,
+                sort: ticketmasterQueries.sort,
                 source: ticketmasterQueries.source,
                 startDateTime: ticketmasterQueries.startDateTime,
                 endDateTime: ticketmasterQueries.endDateTime,
@@ -38,6 +40,7 @@ helperObj.buildRequest = function(choices, startDate, endDate, destination) {
             url: ticketmasterURL,
             qs: {
                 apikey: ticketmasterQueries.apikey,
+                sort: ticketmasterQueries.sort,
                 source: ticketmasterQueries.source,
                 startDateTime: ticketmasterQueries.startDateTime,
                 endDateTime: ticketmasterQueries.endDateTime,
@@ -51,6 +54,7 @@ helperObj.buildRequest = function(choices, startDate, endDate, destination) {
             url: ticketmasterURL,
             qs: {
                 apikey: ticketmasterQueries.apikey,
+                sort: ticketmasterQueries.sort,
                 source: ticketmasterQueries.source,
                 startDateTime: ticketmasterQueries.startDateTime,
                 endDateTime: ticketmasterQueries.endDateTime,
