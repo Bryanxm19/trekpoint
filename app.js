@@ -20,9 +20,9 @@ app.use(express.static(__dirname + "/public"));
 
 //passport config
 app.use(require("express-session")({
-    secret: "Anything",
-    resave: false,
-    saveUninitialized: false
+  secret: "Anything",
+  resave: false,
+  saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -31,13 +31,13 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next) {
-    res.locals.currentUser = req.user;
-    next();
+  res.locals.currentUser = req.user;
+  next();
 });
 
 // use routes
 app.use(indexRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("Server started...");
+  console.log("Server started...");
 });
