@@ -23,7 +23,7 @@
     });
   </script>
   <script>
-    $('#search-form').on('submit', function (e) {
+    $('#search-form').on('submit', function(e) {
       if($("input[name=destination]").val() === "") {
         e.preventDefault();
         $(".alert-danger").remove();
@@ -41,6 +41,19 @@
         $(".alert-danger").remove();
         $(this).parent().prepend("<div class='alert alert-danger'>Please select at least 1 interest</div>");
         return false;
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    $(".info").hide();
+    $(".activity-container h1").click(function(e) {
+      e.preventDefault();
+      var $info = $(this).parent().children("div");
+      
+      if($info.is(':hidden')) {
+        $info.slideDown("slow");  
+      } else {
+        $info.slideUp("slow");
       }
     });
   </script>
