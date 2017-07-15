@@ -12,54 +12,100 @@
 
 /* Landing Page */
 #landing-box {
-    padding-top: 35vh;
+  padding-top: 35vh;
 }
 
-#landing-box h1, #interests-header, #search-form-div h2 {
-    font-family: 'Merriweather', serif; 
-    color: white;
-    text-shadow: 1px 1px #000;
+.heading, .activity-heading:link, .activity-heading:hover, .activity-heading:visited, .results-info {
+  font-family: 'Merriweather', serif; 
+  color: white;
+  text-shadow: 1px 1px #000;
 }
+
+.activity-heading:hover {
+  text-decoration: underline;
+  font-size: larger;
+}
+
+.results-info:hover {
+  text-decoration: none;
+}
+
+.thumbnail {
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.img-rounded {
+  margin-bottom: 10px;
+}
+
+.info {
+  margin-top: 20px;
+}
+
 
 #get-started {
-    background-color: #1589FF;
-    border-color: #1589FF;
-    min-width: 200px;
-    max-width: 200px;
+  background-color: #1589FF;
+  border-color: #1589FF;
+  min-width: 200px;
+  max-width: 200px;
 }
 
 /* Search Form*/
-#search-form-div {
-    width: 70%;
-    margin: 30vh auto;
+#trip-form-container, #results-box {
+  padding: 15px 10px 10px 10px;
+  background-color: rgba(0, 102, 102, 0.55);
+  border-radius: 3%;
 }
 
-#trip-form-container {
-    padding: 20px 10px 10px 10px;
-    background-color: rgba(0, 102, 102, 0.55);
-    border-radius: 3%;
+#search-form-div {
+  width: 70%;
+  margin: 30vh auto;
+}
+
+#results-div {
+  width: 80%;
+  margin: 8vh auto;
+}
+
+#result-info {
+  text-decoration: none;
+}
+
+.well {
+  padding: 20px 10px 10px 10px;
+  background-color: rgba(0, 102, 102, 0.55);
+  border-style: none;
+  border-radius: 20px;
 }
 
 /* Checkbox */
 .checkbox-inline.no_indent,
 .checkbox-inline.no_indent+.checkbox-inline.no_indent {
-    margin-left: 0;
-    margin-right: 10px;
-    margin-top: 5px;
-    color: white;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 5px;
+  color: white;
 }
 .checkbox-inline.no_indent:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 /* For Smaller Screens */
 
 @media (max-width: 427px) {
-    #search-form-div {
-        width: 100%;
-    }
+  #search-form-div, #results-div {
+    width: 100%;
+  }
 
-    body {
-      padding:0;
-    }
+  body {
+    padding:0;
+  }
+}
+
+@media (min-width: 427px) and (max-width: 767px), (max-width: 370px) {
+  .thumbnail {
+    height: 100%;
+  }
 }
