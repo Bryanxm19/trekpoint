@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+<div class="container">
+  <img src="images/background.jpg" id="bg" alt="">
+  <div class="row" id="results-div">
+    <h1 class="text-center heading">Things To Do In <%= data.destination %></h1>
+    <div class="well" id="results-container">
+      <% data.activities.forEach(function(activity) { %>
+          <% if(results[activity].length > 0) { %>
+            <div class="activity-container">
+              <h1 class="text-center"><a class="heading activity-heading" href="#"><%= activity.toUpperCase() %> <span>[<%= results[activity].length %>]</span></a></h1>
+              <div class="row info">
+                <% results[activity].forEach(function(result) { %>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="thumbnail">
+                      <a href="<%= result.url %>" target=_blank>
+                        <img src="<%= result.image_url %>" style="width: 100%;" class="img-rounded">
+                      </a>
+                      <h4 class="text-center results-info"><%= result.name %></h4>
+                      <p class="text-center results-info">Date: <%= result.date %></p>
+                      <p class="text-center results-info">Venue: <%= result.venue %></p>
+                    </div>
+                  </div>
+                <% }) %>
+              </div>
+              <hr>
+            </div>
+          <% } %>
+      <% }) %>           
+    </div>
+  </div>
+</div>
+<a href="/logout">Logout</a>
+<% include ./partials/footer %>
