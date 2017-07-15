@@ -11,7 +11,8 @@ var express         = require("express"),
 var indexRoutes = require("./routes/index");
 
 // connect to db
-mongoose.connect("mongodb://localhost/trekpoint");
+// mongoose.connect("mongodb://localhost/trekpoint");
+mongoose.connect("mongodb://bryan:q06362@ds145639.mlab.com:45639/trekpoint");
 
 // app config
 app.use(bodyParser.urlencoded({extended: true}));
