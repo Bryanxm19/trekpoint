@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Bryanxm19/trekpoint#readme",
   "dependencies": {
+    "apicache": "^0.8.7",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "connect-flash": "^0.1.1",
