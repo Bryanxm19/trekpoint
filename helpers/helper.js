@@ -31,7 +31,7 @@ helperObj.buildRequest = function(data) {
         startDateTime: ticketmasterQueries.startDateTime,
         endDateTime: ticketmasterQueries.endDateTime,
         city: ticketmasterQueries.city,
-        keyword: "music"
+        classificationName: "music"
       }
     }); 
   }
@@ -45,7 +45,7 @@ helperObj.buildRequest = function(data) {
         startDateTime: ticketmasterQueries.startDateTime,
         endDateTime: ticketmasterQueries.endDateTime,
         city: ticketmasterQueries.city,
-        keyword: "sports"
+        classificationName: "sports"
       }
     }); 
   }
@@ -59,7 +59,7 @@ helperObj.buildRequest = function(data) {
         startDateTime: ticketmasterQueries.startDateTime,
         endDateTime: ticketmasterQueries.endDateTime,
         city: ticketmasterQueries.city,
-        keyword: "theater"
+        classificationName: "theater"
       }
     }); 
   }
