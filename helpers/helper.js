@@ -22,45 +22,27 @@ helperObj.buildRequest = function(data) {
     city: data.destination
   };
   if(data.activities.indexOf('music') != -1) {
+    var musicQueries = ticketmasterQueries;
+    musicQueries['classificationName'] = "music";
     request.push({
       url: ticketmasterURL,
-      qs: {
-        apikey: ticketmasterQueries.apikey,
-        sort: ticketmasterQueries.sort,
-        source: ticketmasterQueries.source,
-        startDateTime: ticketmasterQueries.startDateTime,
-        endDateTime: ticketmasterQueries.endDateTime,
-        city: ticketmasterQueries.city,
-        classificationName: "music"
-      }
+      qs: musicQueries
     }); 
   }
   if(data.activities.indexOf('sports') != -1) {
+    var sportsQueries = ticketmasterQueries;
+    sportsQueries['classificationName'] = "sports";
     request.push({
       url: ticketmasterURL,
-      qs: {
-        apikey: ticketmasterQueries.apikey,
-        sort: ticketmasterQueries.sort,
-        source: ticketmasterQueries.source,
-        startDateTime: ticketmasterQueries.startDateTime,
-        endDateTime: ticketmasterQueries.endDateTime,
-        city: ticketmasterQueries.city,
-        classificationName: "sports"
-      }
+      qs: sportsQueries
     }); 
   }
   if(data.activities.indexOf('arts') != -1) {
+    var artsQueries = ticketmasterQueries;
+    artsQueries['classificationName'] = "theater";
     request.push({
       url: ticketmasterURL,
-      qs: {
-        apikey: ticketmasterQueries.apikey,
-        sort: ticketmasterQueries.sort,
-        source: ticketmasterQueries.source,
-        startDateTime: ticketmasterQueries.startDateTime,
-        endDateTime: ticketmasterQueries.endDateTime,
-        city: ticketmasterQueries.city,
-        classificationName: "theater"
-      }
+      qs: artsQueries
     }); 
   }
   if(data.activities.indexOf('restaurants') != -1) {
