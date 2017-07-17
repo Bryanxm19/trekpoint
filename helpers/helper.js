@@ -19,10 +19,12 @@ helperObj.buildRequest = function(data) {
     source: "ticketmaster",
     startDateTime: data.startDate + "T12:00:00Z",
     endDateTime: data.endDate + "T23:59:59Z",
-    city: data.destination
+    city: data.destination,
+    classificationName: ''
   };
   if(data.activities.indexOf('music') != -1) {
-    var musicQueries = ticketmasterQueries;
+    var musicQueries = {};
+    for(var a in ticketmasterQueries) musicQueries[a] = ticketmasterQueries[a];
     musicQueries['classificationName'] = "music";
     request.push({
       url: ticketmasterURL,
@@ -30,7 +32,8 @@ helperObj.buildRequest = function(data) {
     }); 
   }
   if(data.activities.indexOf('sports') != -1) {
-    var sportsQueries = ticketmasterQueries;
+    var sportsQueries = {};
+    for(var b in ticketmasterQueries) sportsQueries[b] = ticketmasterQueries[b];
     sportsQueries['classificationName'] = "sports";
     request.push({
       url: ticketmasterURL,
@@ -38,7 +41,8 @@ helperObj.buildRequest = function(data) {
     }); 
   }
   if(data.activities.indexOf('arts') != -1) {
-    var artsQueries = ticketmasterQueries;
+    var artsQueries = {};
+    for(var c in ticketmasterQueries) artsQueries[c] = ticketmasterQueries[c];
     artsQueries['classificationName'] = "theater";
     request.push({
       url: ticketmasterURL,
@@ -53,6 +57,7 @@ helperObj.buildRequest = function(data) {
       }
     }); 
   }
+  console.log(request);
   return request;
 };
 
